@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Create Laptop";
+}
+@model CreateLaptop
+
+<div>
+    <h1 class="display-4">Create Brand:</h1>
+    <form method="post" class="mb-4">
+        <div class="form-group">
+            <div class="row mb-3">
+                <label class="form-label">Model Name:</label>
+                <input type="text" placeholder="ThinkPad 12" asp-for="ModelName" class="form-control" />
+            </div>
+            <div class="row mb-3">
+                <label class="form-label">Brand Name:</label>
+                @*<input type="text" placeholder="Dell" asp-for="Brand" class="form-control" />*@
+                @*<select asp-for="Brand" class="form-select">
+            <option value="" disabled selected hidden style="color: grey">Choose</option>
+            <option value="Lenovo">Lenovo</option>
+            <option value="Dell">Dell</option>
+            <option value="Acer">Acer</option>
+        </select>*@
+                <select asp-for="Brand" class="form-select">
+                    <option value="" disabled selected hidden style="color: grey">Choose</option>
+                    @foreach (var brand in Database.GetInstance().Brands)
+                    {
+                        <option value="@brand.Name">@brand.Name</option>
+                    }
+                </select>
+            </div>
+        
+            <div class="row mb-3">
+                <label class="form-label">Price:</label>
+                <input type="number" placeholder="12:99" asp-for="Price" class="form-control" />
+            </div>
+            <div class="row mb-3">
+                <label class="form-label">Year:</label>
+                <input type="number" placeholder="2019" asp-for="Year" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+
+    @if (Model.Result != null)
+    {
+        <ul>
+            <li class="list-group-item">Search Results:</li>
+            <li class="list-group-item mb-2">
+                <p>Model Name: @Model.Result.Model</p>
+                <p>Brand Name: @Model.Result.Brand.Name</p>
+                <p>Price: @Model.Result.Price</p>
+                <p>ID: @Model.Result.Id</p>
+                <p>Year: @Model.Result.Year</p>
+            </li>
+        </ul>
+    }
+</div>

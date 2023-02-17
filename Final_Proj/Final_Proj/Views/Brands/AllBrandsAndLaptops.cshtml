@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "All Brands and Laptops";
+}
+@model IEnumerable<IGrouping<string, Laptop>>
+<div>
+    <h1>All Brands and Laptops (with laptops)</</h1>
+
+        @foreach (var kvp in Model)
+        {
+            <h4>@kvp.Key</h4>
+            <ul>
+                @foreach (var laptop in kvp)
+                {
+                    <li class="list-group-item mb-2">
+                        <p>Model: @laptop.Model</p>
+                        <p>━━━━━━━━━━━━━━━━━━━━━━</p>
+                        <p>Price: @laptop.Price</p>
+                        <p>Name: @laptop.Brand.Name</p>
+                        <p>Year: @laptop.Year</p>
+                        <p>ID: @laptop.Id</p>
+                    </li>
+                }
+            </ul>
+          
+        }
+</div>
+

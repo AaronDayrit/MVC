@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "In Range";
+}
+@model LaptopsInRange
+
+<div>
+    <h1 class="display-4">Laptops in Range:</h1>
+    <form method="post" class="mb-4">
+        <div class="form-group">
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Maximum Price:</label>
+                    <input type="text" placeholder="2000" asp-for="Input" class="form-control" />
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+
+    @if(Model.Results.Count() != 0)
+    {
+        <ul>
+            <li class="list-group-item">Search Results:</li>
+            @foreach(var laptop in Model.Results)
+            {
+            <li class="list-group-item mb-2">
+                <p>Model: @laptop.Model</p>
+                <p>━━━━━━━━━━━━━━━━━━━━━━</p>
+                <p>Price: @laptop.Price</p>
+                <p>Name: @laptop.Brand.Name</p>
+                <p>Year: @laptop.Year</p>
+                <p>ID: @laptop.Id</p>
+            </li>
+            }
+        </ul>
+    }
+
+</div>
+

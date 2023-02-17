@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Laptops By Brand Ordered";
+}
+
+
+@model LaptopsByBrandFiltered
+
+<div>
+    <form method="post" class="mb-4">
+        <div class="form-group">
+            <h1 class="display-4">Laptops (Specific Filtering):</h1>
+            <div class="row mb-3">
+                <label class="form-label">Select Brand:</label>
+                <select asp-for="SelectedBrand" class="form-select">
+                    <option value="" disabled selected hidden style="color: grey">Choose</option>
+                    @*<option value="Lenovo">Lenovo</option>
+                        <option value="Dell">Dell</option>
+                        <option value="Acer">Acer</option>*@
+                    @foreach (var brand in Database.GetInstance().Brands)
+                    {
+                        <option value="@brand.Name">@brand.Name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="row mb-3">
+                <label class="form-label">Filter By:</label>
+                <select asp-for="SortFiler" class="form-select">
+                    <option value="" disabled selected hidden style="color: grey">Choose</option>
+                    <option value="Price: $0-100">Price: $0-100</option>
+                    <option value="Price: $1000-2000">Price: $1000-2000</option>
+                    <option value="Year: 2015-2020">Year: 2015-2020</option>
+                    <option value="Year: 2010-2015">Year: 2010-2015</option>
+                    <option value="Year: 2020+">Year: 2020+</option>
+                </select>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div>
+    <ul>
+        <li class="list-group-item">Search Results:</li>
+        @foreach (var laptop in Model.Results)
+        {
+            <li class="list-group-item mb-2">
+                <p>Model: @laptop.Model</p>
+                <p>━━━━━━━━━━━━━━━━━━━━━━</p>
+                <p>Price: @laptop.Price</p>
+                <p>Name: @laptop.Brand.Name</p>
+                <p>Year: @laptop.Year</p>
+                <p>ID: @laptop.Id</p>
+            </li>
+        }
+    </ul>
+</div>

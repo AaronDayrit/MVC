@@ -1,0 +1,68 @@
+﻿<Properties StartupConfiguration="{F7854418-6519-4291-B3DB-8F323F628304}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Final_Proj/Views/Laptops/CreateLaptop.cshtml">
+    <Files>
+      <File FileName="Final_Proj/Controllers/HomeController.cs" />
+      <File FileName="Final_Proj/Models/Data/Laptop.cs" />
+      <File FileName="Final_Proj/Models/Data/Brand.cs" />
+      <File FileName="Final_Proj/Models/Data/Database.cs" />
+      <File FileName="Final_Proj/Controllers/LaptopsController.cs" />
+      <File FileName="Final_Proj/Views/_ViewStart.cshtml" />
+      <File FileName="Final_Proj/Views/_ViewImports.cshtml" />
+      <File FileName="Final_Proj/Program.cs" />
+      <File FileName="Final_Proj/Models/ErrorViewModel.cs" />
+      <File FileName="Final_Proj/Views/Home/Index.cshtml" />
+      <File FileName="Final_Proj/Views/Home/Privacy.cshtml" />
+      <File FileName="Final_Proj/Views/Laptops/Index.cshtml" />
+      <File FileName="Final_Proj/Views/Laptops/LaptopsInRange.cshtml" />
+      <File FileName="Final_Proj/Views/Laptops/CompareLaptops.cshtml" />
+      <File FileName="Final_Proj/Views/Laptops/LeastExpensive.cshtml" />
+      <File FileName="Final_Proj/Views/Shared/_Layout.cshtml" />
+      <File FileName="Final_Proj/Views/Brands/Index.cshtml" />
+      <File FileName="Final_Proj/Views/Laptops/MostExpensive.cshtml" />
+      <File FileName="Final_Proj/Models/Form Models/LaptopsInRange.cs" />
+      <File FileName="Final_Proj/Models/Form Models/CompareLaptops.cs" Line="1" Column="1" />
+      <File FileName="Final_Proj/Models/Enum/Laptops.cs" />
+      <File FileName="Final_Proj/Views/Shared/Error.cshtml" />
+      <File FileName="Final_Proj/Models/Form Models/LaptopsByBrandOrdered.cs" />
+      <File FileName="Final_Proj/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Final_Proj/Models/Form Models/LaptopsByBrandFiltered.cs" />
+      <File FileName="Final_Proj/Views/Brands/LaptopsByBrandFiltered.cshtml" />
+      <File FileName="Final_Proj/Views/Brands/LaptopsByBrandOrdered.cshtml" />
+      <File FileName="Final_Proj/Views/Laptops/CreateLaptop.cshtml" Line="18" Column="1" />
+      <File FileName="Final_Proj/Views/Brands/AllBrandsAndLaptops.cshtml" />
+      <File FileName="Final_Proj/Controllers/BrandsController.cs" />
+      <File FileName="Final_Proj/Views/Brands/CreateBrand.cshtml" />
+      <File FileName="Final_Proj/Models/Form Models/CreateBrand.cs" />
+      <File FileName="Final_Proj/Models/Form Models/CreateLaptop.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Final_Proj" expanded="True">
+            <Node name="Final_Proj" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Data" expanded="True" />
+                <Node name="Enum" expanded="True" />
+                <Node name="Form Models" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Brands" expanded="True" />
+                <Node name="Laptops" expanded="True">
+                  <Node name="CreateLaptop.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Final__Proj PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Least Expensive";
+}
+@model IEnumerable<Laptop>
+
+<div>
+    <ul class="list-group">
+        <li class="list-group-item active">
+            Least Expensive Laptops::
+        </li>
+        @foreach (var laptop in Model)
+        {
+            <li class="list-group-item">
+                <p>Model: @laptop.Model</p>
+                <p>━━━━━━━━━━━━━━━━━━━━━━</p>
+                <p>Price: @laptop.Price</p>
+                <p>Name: @laptop.Brand.Name</p>
+                <p>Year: @laptop.Year</p>
+                <p>ID: @laptop.Id</p>
+            </li>
+        }
+    </ul>
+</div>

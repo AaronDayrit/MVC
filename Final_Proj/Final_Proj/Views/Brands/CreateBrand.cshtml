@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Create Brand";
+}
+@model CreateBrand
+
+<div>
+        <h1 class="display-4">Create Brand:</h1>
+        <form method="post" class="mb-4">
+            <div class="form-group">
+                <div class="row mb-3">
+                    <label class="form-label">Brand Name:</label>
+                    <input type="text" placeholder="Apple" asp-for="Name" class="form-control" />
+                </div>
+               
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+
+
+        @if (Model.Result != null)
+        {
+            <ul>
+                <li class="list-group-item">Results:</li>
+                <li class="list-group-item mb-2">
+                    <p>Name: @Model.Result.Name</p>
+                    <p>ID: @Model.Result.Id</p>
+                </li>
+            </ul>
+        }
+</div>
+

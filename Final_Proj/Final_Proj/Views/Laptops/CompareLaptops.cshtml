@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Compare Laptops";
+}
+@model CompareLaptops
+
+    <div>
+        <h1 class="display-4">Compare Laptops:</h1>
+        <form method="post" class="mb-4">
+            <div class="form-group">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label class="form-label">Laptop 1:</label>
+                        <select asp-for="Input1" class="form-select">
+                            <option value="" disabled selected hidden style="color: grey">Choose</option>
+                            @*<option value="ThinkBook 15">ThinkBook 15</option>
+        <option value="Ideapad">Ideapad</option>
+        <option value="Latitude 5290">Latitude 5290</option>
+        <option value="Inspiron 15 3000">Inspiron 15 3000</option>
+        <option value="Nitro 5">Nitro 5</option>*@
+                            @foreach (var laptop in Database.GetInstance().Laptops)
+                            {
+                                <option value="@laptop.Model">@laptop.Model</option>
+                            }
+                        </select>
+
+                    </div>
+
+                    <div class="col">
+                        <label class="form-label">Laptop 2:</label>
+                        <select asp-for="Input2" class="form-select">
+                            <option value="" disabled selected hidden style="color: grey">Choose</option>
+                            @*<option value="ThinkBook 15">ThinkBook 15</option>
+        <option value="Ideapad">Ideapad</option>
+        <option value="Latitude 5290">Latitude 5290</option>
+        <option value="Inspiron 15 3000">Inspiron 15 3000</option>
+        <option value="Nitro 5">Nitro 5</option>*@
+                            @foreach (var laptop in Database.GetInstance().Laptops)
+                            {
+                                <option value="@laptop.Model">@laptop.Model</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+
+        @if (Model.Laptop1 != null && Model.Laptop2 != null)
+        {
+            
+            <div class="row">
+                <div class="col">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p>Model: @Model.Laptop1.Model</p>
+                            <p>━━━━━━━━━━━━━━━━━━━━━━</p>
+                            <p>Price: @Model.Laptop1.Price</p>
+                            <p>Name: @Model.Laptop1.Brand.Name</p>
+                            <p>Year: @Model.Laptop1.Year</p>
+                            <p>ID: @Model.Laptop1.Id</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p>Model: @Model.Laptop2.Model</p>
+                            <p>━━━━━━━━━━━━━━━━━━━━━━</p>
+                            <p>Price: @Model.Laptop2.Price</p>
+                            <p>Name: @Model.Laptop2.Brand.Name</p>
+                            <p>Year: @Model.Laptop2.Year</p>
+                            <p>ID: @Model.Laptop2.Id</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        }
+
+    </div>
+
